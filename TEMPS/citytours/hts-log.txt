@@ -1,0 +1,129 @@
+HTTrack3.49-2 launched on Fri, 18 Mar 2022 14:35:16 at http://www.ansonika.com/citytours/
+(httrack http://www.ansonika.com/citytours/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:35:17	Warning: 	Note: due to www.ansonika.com remote robots.txt rules, links beginning with these path will be forbidden: /forum/, /test/ (see in the options to disable this)
+14:41:34	Warning: 	file not stored in cache due to bogus state (broken size, expected 320576 got 234263): www.ansonika.com/citytours/css/fontello/font/fontello.woff?32974303
+14:41:55	Warning: 	file not stored in cache due to bogus state (broken size, expected 532632 got 393537): www.ansonika.com/citytours/css/fontello/font/fontello.eot?32974303
+14:50:02	Warning: 	file not stored in cache due to bogus state (broken size, expected 975825 got 298006): www.ansonika.com/citytours/img/slider_single_tour/4_large.jpg
+14:50:22	Warning: 	file not stored in cache due to bogus state (broken size, expected 781417 got 425431): www.ansonika.com/citytours/img/slider_single_tour/2_large.jpg
+14:50:53	Warning: 	file not stored in cache due to bogus state (broken size, expected 408711 got 266150): www.ansonika.com/citytours/img/slider_single_tour/5_large.jpg
+14:51:23	Warning: 	file not stored in cache due to bogus state (broken size, expected 571675 got 361718): www.ansonika.com/citytours/img/slider_single_tour/6_large.jpg
+14:51:27	Warning: 	file not stored in cache due to bogus state (broken size, expected 821168 got 361718): www.ansonika.com/citytours/img/slider_single_tour/7_large.jpg
+14:51:46	Warning: 	file not stored in cache due to bogus state (broken size, expected 504341 got 298006): www.ansonika.com/citytours/img/slider_single_tour/9_large.jpg
+14:52:04	Warning: 	file not stored in cache due to bogus state (broken size, expected 678225 got 425430): www.ansonika.com/citytours/img/slider_single_tour/8_large.jpg
+14:55:00	Warning: 	file not stored in cache due to bogus state (broken size, expected 570925 got 298006): www.ansonika.com/citytours/img/restaurant_box_7.jpg
+15:01:32	Warning: 	Retry after error -4 (Incorrect length (393537 Bytes, 532632 expected)) at link www.ansonika.com/citytours/css/fontello/font/fontello.eot?32974303 (from www.ansonika.com/citytours/css/vendors.css)
+15:01:33	Warning: 	Retry after error -4 (Incorrect length (234263 Bytes, 320576 expected)) at link www.ansonika.com/citytours/css/fontello/font/fontello.woff?32974303 (from www.ansonika.com/citytours/css/vendors.css)
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/fontello/font/fontello.ttf?32974303
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/fontello/font/icon_set_1.ttf?55361665
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/fontello/font/icon_set_2.ttf?40207016
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/icon_restaurant/fonts/Glyphter.ttf
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/new_icons/font/Pe-icon-7-stroke.ttf?d7yf1v
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/css/new_icons/font/ElegantIcons.ttf
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/rev-slider-files/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/rev-slider-files/fonts/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0
+15:01:36	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/rev-slider-files/fonts/revicons/revicons.ttf?5510888
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/gridtile.png (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/gridtile_white.png (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/gridtile_3x3.png (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/gridtile_3x3_white.png (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/coloredbg.png (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rev-slider-files/assets/loader.gif (from www.ansonika.com/citytours/rev-slider-files/css/settings.css)
+15:01:36	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/all_tour_list.html (from www.ansonika.com/citytours/index_24.html)
+15:02:28	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/1&title=0&byline=0&portrait=0&api=1" (from www.ansonika.com/citytours/index_15.html)
+15:02:29	Warning: 	Retry after error -4 (Incorrect length (425431 Bytes, 781417 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/2_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:02:29	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 975825 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/4_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:02:29	Warning: 	Retry after error -4 (Incorrect length (266150 Bytes, 408711 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/5_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:02:29	Warning: 	Retry after error -4 (Incorrect length (361718 Bytes, 571675 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/6_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:02:55	Warning: 	Retry after error -4 (Incorrect length (361718 Bytes, 821168 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/7_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:03:07	Warning: 	Retry after error -4 (Incorrect length (425430 Bytes, 678225 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/8_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:03:29	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 504341 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/9_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:03:49	Warning: 	file not stored in cache due to bogus state (broken size, expected 821168 got 659668): www.ansonika.com/citytours/img/slider_single_tour/7_large.jpg
+15:03:49	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 570925 expected)) at link www.ansonika.com/citytours/img/restaurant_box_7.jpg (from www.ansonika.com/citytours/all_restaurants_grid.html)
+15:04:12	Warning: 	file not stored in cache due to bogus state (broken size, expected 975825 got 882660): www.ansonika.com/citytours/img/slider_single_tour/4_large.jpg
+15:05:10	Warning: 	file not stored in cache due to bogus state (broken size, expected 532632 got 266114): www.ansonika.com/citytours/site_launch/fontello/font/fontello.eot?32974303
+15:05:18	Warning: 	file not stored in cache due to bogus state (broken size, expected 320576 got 297975): www.ansonika.com/citytours/site_launch/fontello/font/fontello.woff?32974303
+15:06:44	Warning: 	file not stored in cache due to bogus state (broken size, expected 532632 got 266113): www.ansonika.com/citytours/html_rtl/css/fontello/font/fontello.eot?32974303
+15:06:46	Warning: 	file not stored in cache due to bogus state (broken size, expected 320576 got 266119): www.ansonika.com/citytours/html_rtl/css/fontello/font/fontello.woff?32974303
+15:10:22	Warning: 	file not stored in cache due to bogus state (broken size, expected 456596 got 298006): www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_2.jpg
+15:10:26	Warning: 	file not stored in cache due to bogus state (broken size, expected 316400 got 266150): www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_3.jpg
+15:10:52	Warning: 	file not stored in cache due to bogus state (broken size, expected 328383 got 266150): www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_5.jpg
+15:11:18	Warning: 	file not stored in cache due to bogus state (broken size, expected 281968 got 266151): www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/newspaper_bg3.jpg
+15:15:02	Warning: 	file not stored in cache due to bogus state (broken size, expected 781417 got 298007): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/2_large.jpg
+15:15:36	Warning: 	file not stored in cache due to bogus state (broken size, expected 548646 got 457286): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/3_large.jpg
+15:15:48	Warning: 	file not stored in cache due to bogus state (broken size, expected 975825 got 520998): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/4_large.jpg
+15:15:52	Warning: 	file not stored in cache due to bogus state (broken size, expected 408711 got 266150): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/5_large.jpg
+15:16:28	Warning: 	file not stored in cache due to bogus state (broken size, expected 571675 got 361718): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/6_large.jpg
+15:16:30	Warning: 	file not stored in cache due to bogus state (broken size, expected 821168 got 298006): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/7_large.jpg
+15:16:46	Warning: 	file not stored in cache due to bogus state (broken size, expected 504341 got 298006): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/9_large.jpg
+15:17:42	Warning: 	file not stored in cache due to bogus state (broken size, expected 678225 got 616566): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/8_large.jpg
+15:20:20	Warning: 	file not stored in cache due to bogus state (broken size, expected 570925 got 300902): www.ansonika.com/citytours/html_rtl/img/restaurant_box_7.jpg
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rs-plugin/images/gradient/g30.png (from www.ansonika.com/citytours/rs-plugin/css/settings.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/rs-plugin/images/gradient/g40.png (from www.ansonika.com/citytours/rs-plugin/css/settings.css)
+15:22:22	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/rs-plugin/font/revicons.ttf?5510888
+15:22:22	Warning: 	Retry after error -4 (Incorrect length (882660 Bytes, 975825 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/4_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:22:22	Warning: 	Retry after error -4 (Incorrect length (659668 Bytes, 821168 expected)) at link www.ansonika.com/citytours/img/slider_single_tour/7_large.jpg (from www.ansonika.com/citytours/single_tour_with_gallery.html)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.eot (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.eot? (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.woff2 (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.woff (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.ttf (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/site_launch/fonts/glyphicons-halflings-regular.svg (from www.ansonika.com/citytours/site_launch/css/bootstrap.min.css)
+15:22:22	Warning: 	Retry after error -4 (Incorrect length (266114 Bytes, 532632 expected)) at link www.ansonika.com/citytours/site_launch/fontello/font/fontello.eot?32974303 (from www.ansonika.com/citytours/site_launch/fontello/css/fontello.css)
+15:22:22	Warning: 	Retry after error -4 (Incorrect length (297975 Bytes, 320576 expected)) at link www.ansonika.com/citytours/site_launch/fontello/font/fontello.woff?32974303 (from www.ansonika.com/citytours/site_launch/fontello/css/fontello.css)
+15:22:26	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/site_launch/fontello/font/fontello.ttf?32974303
+15:22:26	Warning: 	Retry after error -4 (Incorrect length (266113 Bytes, 532632 expected)) at link www.ansonika.com/citytours/html_rtl/css/fontello/font/fontello.eot?32974303 (from www.ansonika.com/citytours/html_rtl/css/vendors.css)
+15:22:37	Warning: 	Retry after error -4 (Incorrect length (266119 Bytes, 320576 expected)) at link www.ansonika.com/citytours/html_rtl/css/fontello/font/fontello.woff?32974303 (from www.ansonika.com/citytours/html_rtl/css/vendors.css)
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/fontello/font/fontello.ttf?32974303
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/fontello/font/icon_set_1.ttf?55361665
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/fontello/font/icon_set_2.ttf?40207016
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/icon_restaurant/fonts/Glyphter.ttf
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/new_icons/font/Pe-icon-7-stroke.ttf?d7yf1v
+15:22:48	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/css/new_icons/font/ElegantIcons.ttf
+15:23:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/all_tour_list.html (from www.ansonika.com/citytours/html_rtl/index_24.html)
+15:24:15	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/1&title=0&byline=0&portrait=0&api=1" (from www.ansonika.com/citytours/html_rtl/index_15.html)
+15:24:15	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 456596 expected)) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_2.jpg (from www.ansonika.com/citytours/html_rtl/index_17.html)
+15:24:15	Warning: 	Retry after error -4 (Incorrect length (266150 Bytes, 316400 expected)) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_3.jpg (from www.ansonika.com/citytours/html_rtl/index_17.html)
+15:24:15	Warning: 	Retry after error -4 (Incorrect length (266150 Bytes, 328383 expected)) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/slide_5.jpg (from www.ansonika.com/citytours/html_rtl/index_21.html)
+15:24:15	Warning: 	Retry after error -4 (Incorrect length (266151 Bytes, 281968 expected)) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/newspaper_bg3.jpg (from www.ansonika.com/citytours/html_rtl/index_16.html)
+15:24:19	Warning: 	Retry after error -4 (Incorrect length (298007 Bytes, 781417 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/2_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:24:23	Warning: 	Retry after error -4 (Incorrect length (457286 Bytes, 548646 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/3_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:24:25	Warning: 	Retry after error -4 (Incorrect length (520998 Bytes, 975825 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/4_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:24:40	Warning: 	Retry after error -4 (Incorrect length (266150 Bytes, 408711 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/5_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:24:40	Warning: 	Retry after error -4 (Incorrect length (361718 Bytes, 571675 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/6_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:25:06	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 821168 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/7_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:25:17	Warning: 	Retry after error -4 (Incorrect length (616566 Bytes, 678225 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/8_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:25:28	Warning: 	Retry after error -4 (Incorrect length (298006 Bytes, 504341 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/9_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:25:39	Warning: 	Retry after error -4 (Incorrect length (300902 Bytes, 570925 expected)) at link www.ansonika.com/citytours/html_rtl/img/restaurant_box_7.jpg (from www.ansonika.com/citytours/html_rtl/all_restaurants_grid.html)
+15:25:40	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/js/jquery.selectbox-0.2.js (from www.ansonika.com/citytours/html_rtl/header_6.html)
+15:26:21	Warning: 	file not stored in cache due to bogus state (broken size, expected 821168 got 691524): www.ansonika.com/citytours/html_rtl/img/slider_single_tour/7_large.jpg
+15:26:32	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/rev-slider-files/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0
+15:26:32	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/rev-slider-files/fonts/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0
+15:26:32	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/rev-slider-files/fonts/revicons/revicons.ttf?5510888
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/gridtile.png (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/gridtile_white.png (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/gridtile_3x3.png (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/gridtile_3x3_white.png (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/coloredbg.png (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rev-slider-files/assets/loader.gif (from www.ansonika.com/citytours/html_rtl/rev-slider-files/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rs-plugin/images/gradient/g30.png (from www.ansonika.com/citytours/html_rtl/rs-plugin/css/settings.css)
+15:26:32	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/rs-plugin/images/gradient/g40.png (from www.ansonika.com/citytours/html_rtl/rs-plugin/css/settings.css)
+15:26:32	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/rs-plugin/font/revicons.ttf?5510888
+15:26:32	Warning: 	Retry after error -4 (Incorrect length (691524 Bytes, 821168 expected)) at link www.ansonika.com/citytours/html_rtl/img/slider_single_tour/7_large.jpg (from www.ansonika.com/citytours/html_rtl/single_tour_with_gallery.html)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.eot (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.eot? (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.woff2 (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.woff (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.ttf (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:39	Error: 	"Not Found" (404) at link www.ansonika.com/citytours/html_rtl/site_launch/fonts/glyphicons-halflings-regular.svg (from www.ansonika.com/citytours/html_rtl/site_launch/css/bootstrap.min.css)
+15:26:58	Warning: 	file not stored in cache due to bogus state (broken size, expected 532632 got 234258): www.ansonika.com/citytours/html_rtl/site_launch/fontello/font/fontello.eot?32974303
+15:26:58	Warning: 	Retry after error -4 (Incorrect length (234258 Bytes, 532632 expected)) at link www.ansonika.com/citytours/html_rtl/site_launch/fontello/font/fontello.eot?32974303 (from www.ansonika.com/citytours/html_rtl/site_launch/fontello/css/fontello.css)
+15:27:16	Warning: 	File not parsed, looks like binary: www.ansonika.com/citytours/html_rtl/site_launch/fontello/font/fontello.ttf?32974303
+
+HTTrack Website Copier/3.49-2 mirror complete in 52 minutes 16 seconds : 1103 links scanned, 1038 files written (71411348 bytes overall) [62228386 bytes received at 19843 bytes/sec], 11148524 bytes transferred using HTTP compression in 223 files, ratio 14%, 2.7 requests per connection
+(33 errors, 85 warnings, 0 messages)
