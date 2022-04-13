@@ -470,7 +470,8 @@
         <p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>
     </div>
     <!-- End container -->
-    <!-- NOTIFY BUBBLES  -->
-    <script src="{{asset('assets')}}/js/notify_func.js"></script>
+    <script src="{{asset('assets')}}/js/jquery-3.6.0.min.js"></script>
+    <script src="{{asset('assets')}}/js/common_scripts_min.js"></script>
+    <script src="{{asset('assets')}}/js/functions.js"></script>
 
 @endsection

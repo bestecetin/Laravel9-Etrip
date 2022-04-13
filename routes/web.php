@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +30,5 @@ Route::post('/save', [HomeController::class, 'save'])->name('save');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+//****** Admin Panel ****
+Route::get('/admin', [AdminHomeController::class, 'index'])->name('admin');
