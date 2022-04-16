@@ -1,7 +1,7 @@
 
 @extends('layouts.adminbase')
 
-@section('title', 'Admin Panel')
+@section('title', 'Category List')
 
 
 @section('content')
@@ -11,7 +11,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Plain Page</h3>
+                    <h3>Category List</h3>
                 </div>
 
                 <div class="title_right">
@@ -29,6 +29,7 @@
             <div class="clearfix"></div>
 
             <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
                             <h2>Category List</h2>
@@ -50,7 +51,38 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            Add content to the page ...
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th style="width: 10px">Id</th>
+                                    <th>Title</th>
+                                    <th>Keywords</th>
+                                    <th>Description</th>
+                                    <th>Image</th>
+                                    <th>Status</th>
+                                    <th style="width: 40px">Edit</th>
+                                    <th style="width: 40px">Delete</th>
+                                    <th style="width: 40px">Show</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($data as $rs)
+                                    <tr>
+                                        <td>{{$rs->id}}</td>
+                                        <td>{{$rs->title}}</td>
+                                        <td>{{$rs->keywords}}</td>
+                                        <td>{{$rs->description}}</td>
+                                        <td>{{$rs->image}}</td>
+                                        <td>{{$rs->status}}</td>
+                                        <td><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-round btn-primary">Edit</a></td>
+                                        <td><a href="/admin/category/delete/{{$rs->id}}" class="btn btn-round btn-danger">Delete</a></td>
+                                        <td><a href="/admin/category/show/{{$rs->id}}" class="btn btn-round btn-success">Show</a></td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
