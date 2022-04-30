@@ -11,7 +11,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>Category List</h3>
+                    <a href="/admin/category/create" class="btn btn-info" style="width: 200px">Add Category</a>
                 </div>
 
                 <div class="title_right">
