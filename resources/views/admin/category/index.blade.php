@@ -11,7 +11,7 @@
         <div class="">
             <div class="page-title">
                 <div class="title_left">
-                    <a href="/admin/category/create" class="btn btn-info" style="width: 200px">Add Category</a>
+                    <a href="{{route('admin.category.create')}}" class="btn btn-info" style="width: 200px">Add Category</a>
                 </div>
 
                 <div class="title_right">
@@ -60,10 +60,10 @@
                                         <td>{{$rs->description}}</td>
                                         <td>{{$rs->image}}</td>
                                         <td>{{$rs->status}}</td>
-                                        <td><a href="/admin/category/edit/{{$rs->id}}" class="btn btn-round btn-primary">Edit</a></td>
-                                        <td><a href="/admin/category/destroy/{{$rs->id}}" class="btn btn-round btn-danger"
+                                        <td><a href="{{route('admin.category.edit',['id'=>$rs->id])}}" class="btn btn-round btn-primary">Edit</a></td>
+                                        <td><a href="{{route('admin.category.destroy',['id'=>$rs->id])}}" class="btn btn-round btn-danger"
                                             onclick="return confirm('Deleting!!! Are you sure ?')">Delete</a></td>
-                                        <td><a href="/admin/category/show/{{$rs->id}}" class="btn btn-round btn-success">Show</a></td>
+                                        <td><a href="{{route('admin.category.show',['id'=>$rs->id])}}" class="btn btn-round btn-success">Show</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
