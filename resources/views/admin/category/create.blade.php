@@ -57,6 +57,16 @@
                                 <div class="form-group">
                                     @csrf
                                     <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Parent Category</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select name="parent_id" class="form-control">
+                                            @foreach($data as $rs)
+                                                <option value="{{$rs->id}}">{{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs,$rs->title)}}</option>
+                                            @endforeach
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Title<span class="required">*</span>
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
