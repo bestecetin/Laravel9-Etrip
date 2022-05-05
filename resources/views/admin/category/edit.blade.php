@@ -37,7 +37,7 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post">
+                            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="{{route('admin.category.update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group">
                                     @csrf

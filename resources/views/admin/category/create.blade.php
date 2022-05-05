@@ -52,7 +52,7 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="{{route('admin.category.create')}}" method="post">
+                            <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group">
                                     @csrf
