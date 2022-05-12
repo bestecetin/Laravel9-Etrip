@@ -44,12 +44,11 @@
                                     <th>Title</th>
                                     <th>City</th>
                                     <th>Country</th>
-                                    <th>Location</th>
-                                    <th>Phone</th>
                                     <th>Working Hours Start</th>
                                     <th>Working Hours End</th>
                                     <th>Working Days</th>
                                     <th>Image</th>
+                                    <th>Image Gallery</th>
                                     <th>Status</th>
                                     <th style="width: 40px">Edit</th>
                                     <th style="width: 40px">Delete</th>
@@ -65,8 +64,6 @@
                                         <td>{{$rs->title}}</td>
                                         <td>{{$rs->city}}</td>
                                         <td>{{$rs->country}}</td>
-                                        <td>{{$rs->location}}</td>
-                                        <td>{{$rs->phone}}</td>
                                         <td>{{$rs->working_hours_start}}</td>
                                         <td>{{$rs->working_hours_end}}</td>
                                         <td>{{$rs->working_days}}</td>
@@ -75,6 +72,9 @@
                                                 <img src="{{Storage::url($rs->image)}}" style="height: 40px">
                                             @endif
                                         </td>
+                                            <td>
+                                                <img src="{{asset('assets')}}/admin/production/images/gallery.png" alt="" style="height: 40px">
+                                            </td>
                                         <td>{{$rs->status}}</td>
                                         <td><a href="{{route('admin.place.edit',['id'=>$rs->id])}}" class="btn btn-round btn-primary">Edit</a></td>
                                         <td><a href="{{route('admin.place.destroy',['id'=>$rs->id])}}" class="btn btn-round btn-danger"
