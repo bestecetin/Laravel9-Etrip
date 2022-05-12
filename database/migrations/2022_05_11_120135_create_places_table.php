@@ -13,15 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('places', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->nullable();
-            $table->foreignId('parent_id')->nullable();
+            $table->foreignId('user_id')->nullable();
             $table->string('title')->nullable();
             $table->string('keywords')->nullable();
             $table->string('description')->nullable();
             $table->string('image')->nullable();
-            $table->string('status',6);
+            $table->string('detail')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->string('location')->nullable();
+            $table->string('phone')->nullable();
+            $table->time('working_hours_start')->nullable();
+            $table->time('working_hours_end')->nullable();
+            $table->string('working_days')->nullable();
+            $table->string('status',6)->default('False');
             $table->timestamps();
         });
     }
@@ -33,6 +41,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('places');
     }
 };
