@@ -73,7 +73,10 @@
                                             @endif
                                         </td>
                                             <td>
+                                                <a href="{{route('admin.image.index',['pid'=>$rs->id])}}"
+                                                    onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
                                                 <img src="{{asset('assets')}}/admin/production/images/gallery.png" alt="" style="height: 40px">
+                                                </a>
                                             </td>
                                         <td>{{$rs->status}}</td>
                                         <td><a href="{{route('admin.place.edit',['id'=>$rs->id])}}" class="btn btn-round btn-primary">Edit</a></td>

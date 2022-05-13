@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\AdminPanel;
 
 use App\Http\Controllers\Controller;
+use App\Models\Image;
+use App\Models\Place;
 use Illuminate\Http\Request;
 
 class ImageController extends Controller
@@ -14,18 +16,14 @@ class ImageController extends Controller
      */
     public function index($pid)
     {
-        //
+        $place=Place::find($pid);
+        $images=Image::where('product_id',$pid);
+        return view('admin.image.index',[
+            'place'=>$place,
+            'images'=>$images,
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create($pid)
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +33,14 @@ class ImageController extends Controller
      */
     public function store(Request $request,$pid)
     {
-        //
+        $data= new Image();
+        $data->place_id=$pid;
+        $data->title=$request->title;
+        if ($request->file('image')){
+            $data->image=$request->file('image')->store('images');
+        }
+        $data->save();
+        return redirect()->route('admin.image.index',['pid'=>$pid]);
     }
 
     /**
