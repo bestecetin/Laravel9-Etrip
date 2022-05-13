@@ -50,9 +50,7 @@
                                     <th style="width: 10px">Id</th>
                                     <th>Title</th>
                                     <th>Image</th>
-                                    <th style="width: 40px">Edit</th>
                                     <th style="width: 40px">Delete</th>
-                                    <th style="width: 40px">Show</th>
 
                                 </tr>
                                 </thead>
@@ -63,13 +61,11 @@
                                         <td>{{$rs->title}}</td>
                                         <td>
                                             @if($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}" style="height: 40px">
+                                                <img src="{{Storage::url($rs->image)}}" style="height: 80px">
                                             @endif
                                         </td>
-                                        <td><a href="{{route('admin.category.edit',['id'=>$rs->id])}}" class="btn btn-round btn-primary">Edit</a></td>
-                                        <td><a href="{{route('admin.category.destroy',['id'=>$rs->id])}}" class="btn btn-round btn-danger"
+                                        <td><a href="{{route('admin.image.destroy',['pid'=>$place->id,'id'=>$rs->id])}}" class="btn btn-round btn-danger"
                                             onclick="return confirm('Deleting!!! Are you sure ?')">Delete</a></td>
-                                        <td><a href="{{route('admin.category.show',['id'=>$rs->id])}}" class="btn btn-round btn-success">Show</a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>

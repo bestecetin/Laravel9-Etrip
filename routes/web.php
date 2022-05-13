@@ -38,7 +38,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
     //****** Category Panel Routes ****
-        Route::prefix('category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
+        Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
             Route::get('/',  'index')->name('index');
             Route::get('/create', 'create')->name('create');
             Route::post('/store', 'store')->name('store');
@@ -48,7 +48,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
             Route::get('/show/{id}', 'show')->name('show');
         });
      //****** Admin Place Panel Routes ****
-    Route::prefix('place')->name('place.')->controller(AdminPlaceController::class)->group(function () {
+    Route::prefix('/place')->name('place.')->controller(AdminPlaceController::class)->group(function () {
         Route::get('/',  'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::post('/store', 'store')->name('store');
@@ -58,10 +58,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/show/{id}', 'show')->name('show');
     });
     //****** Admin Place Gallery Panel Routes ****
-    Route::prefix('image')->name('image.')->controller(ImageController::class)->group(function () {
+    Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
         Route::get('/{pid}',  'index')->name('index');
         Route::post('/store/{pid}', 'store')->name('store');
-        Route::post('/update/{pid}/{id}', 'update')->name('update');
         Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
 
     });
