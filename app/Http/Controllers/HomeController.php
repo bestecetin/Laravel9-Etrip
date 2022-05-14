@@ -2,13 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Place;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     //
     public function index(){
-        return view('home.index');
+        $sliderdata=Place::limit(4)->get();
+        $placelist1=Place::limit(6)->get();
+        $placelist2=Place::where('city','Istanbul')->limit(6)->get();
+        $placelist3=Place::where('city','Paris')->limit(6)->get();
+        return view('home.index',[
+            'sliderdata'=>$sliderdata,
+            'placelist1'=>$placelist1,
+            'placelist2'=>$placelist2,
+            'placelist3'=>$placelist3
+            ]
+        );
     }
     public function test(){
         return view('home.test');
