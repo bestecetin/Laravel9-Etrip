@@ -34,7 +34,7 @@
 @yield('content')
 
 @include("admin.footer")
-@yield('foot')
+
     </div>
 </div>
 <!-- jQuery -->
@@ -48,5 +48,6 @@
 
 <!-- Custom Theme Scripts -->
 <script src="{{asset('assets')}}/admin/build/js/custom.min.js"></script>
+@yield('foot')
 </body>
 </html>

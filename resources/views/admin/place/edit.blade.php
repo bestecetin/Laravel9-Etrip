@@ -2,10 +2,7 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Edit Place:'.$data->title)
-@section('head')
-    <!-- include summernote css/js -->
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-@endsection
+
 @section('content')
 
     <!-- page content -->
@@ -174,7 +171,7 @@
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea name="description" class="textarea form-control" id="description">
+                                        <textarea name="description"  id="summernote">
                                             {{$data->description}}
                                         </textarea>
                                     </div>
@@ -210,10 +207,12 @@
 
 @endsection
 @section('foot')
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script>
-        $(function() {
-            $('.textarea').summernote()
-        })
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
     </script>
 @endsection

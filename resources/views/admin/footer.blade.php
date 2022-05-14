@@ -5,7 +5,7 @@
     </div>
     <div class="clearfix"></div>
 </footer>
-<!-- /footer con
+<!-- /footer content -->
 
 
 

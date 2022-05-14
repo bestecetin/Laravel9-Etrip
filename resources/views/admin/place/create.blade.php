@@ -127,7 +127,7 @@
                                                 <option>08:00</option>
                                                 <option>09:00</option>
                                                 <option>10:00</option>
-                                                <option>None</option>
+                                                <option>00:00</option>
                                             </select>
                                         </div>
                                     </div>
@@ -146,7 +146,7 @@
                                                 <option>01:00</option>
                                                 <option>02:00</option>
                                                 <option>03:00</option>
-                                                <option>None</option>
+                                                <option>00:00</option>
                                             </select>
                                         </div>
                                     </div>
