@@ -91,7 +91,7 @@
                                 </tr>
                                 <tr>
                                     <th>Description</th>
-                                    <td>{{$data->description}}</td>
+                                    <td>{!! $data->description!!}</td>
                                 </tr>
 
                                 <tr>

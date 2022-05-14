@@ -120,6 +120,7 @@ class AdminPlaceController extends Controller
         $data->working_hours_end=$request->working_hours_end;
         $data->working_days=$request->working_days;
         $data->status=$request->status;
+        $data->description=$request->description;
         if ($request->file('image')){
             $data->image=$request->file('image')->store('images');
         }

@@ -2,8 +2,9 @@
 @extends('layouts.adminbase')
 
 @section('title', 'Add Place')
-
-
+@section('head')
+<script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+@endsection
 @section('content')
 
     <!-- page content -->
@@ -165,7 +166,17 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Description
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea name="description" class="form-control" rows="7"></textarea>
+                                            <textarea name="description" class="form-control"  id="description" rows="7"></textarea>
+                                            <script>
+                                                ClassicEditor
+                                                    .create( document.querySelector( '#description' ) )
+                                                    .then( editor => {
+                                                        console.log( editor );
+                                                    } )
+                                                    .catch( error => {
+                                                        console.error( error );
+                                                    } );
+                                            </script>
                                         </div>
                                     </div>
 
