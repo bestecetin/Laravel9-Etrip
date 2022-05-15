@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Place;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -20,6 +21,14 @@ class HomeController extends Controller
             'placelist3'=>$placelist3
             ]
         );
+    }
+    public function place($id){
+        $data=Place::find($id);
+        $images=DB::table('images')->where('place_id',$id)->get();
+        return view('home.place',[
+                'data'=>$data,
+                'images'=>$images
+        ]);
     }
     public function test(){
         return view('home.test');

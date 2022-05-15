@@ -44,7 +44,7 @@
 @include("home.header")
 @show
 
-@include("home.slider")
+@section('slider')
 
 @show
 
