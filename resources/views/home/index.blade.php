@@ -1,7 +1,11 @@
 
 @extends('layouts.frontbase')
 
-@section('title', 'E Commerce Project')
+@section('title',$setting->title )
+
+@section('description',$setting->description)
+@section('keywords', $setting->keywords)
+@section('icon', Storage::url($setting->icon))
 
 @section('slider')
     @include('home.slider')

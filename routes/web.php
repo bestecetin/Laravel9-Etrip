@@ -38,6 +38,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //****** Admin Panel Routes****
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('index');
+    //****** Genaral Routes ****
+    Route::get('/setting', [AdminHomeController::class, 'setting'])->name('setting');
+    Route::post('/setting', [AdminHomeController::class, 'settingUpdate'])->name('setting.update');
+
     //****** Category Panel Routes ****
         Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
             Route::get('/',  'index')->name('index');

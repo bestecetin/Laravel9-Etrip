@@ -77,7 +77,7 @@
                         <img alt="Image" class="sp-thumbnail" src="{{Storage::url($rs->image)}}">
                         @endforeach
                     </div>
-                </div>
+            </div>
             <hr>
                     <div class="row">
                         <div class="col-lg-3">

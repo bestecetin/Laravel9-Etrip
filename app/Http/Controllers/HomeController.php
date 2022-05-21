@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Place;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,11 +11,16 @@ class HomeController extends Controller
 {
     //
     public function index(){
+        $page='home';
         $sliderdata=Place::limit(4)->get();
         $placelist1=Place::limit(6)->get();
         $placelist2=Place::where('city','Istanbul')->limit(6)->get();
         $placelist3=Place::where('city','Paris')->limit(6)->get();
+
+        $setting=Setting::first();
         return view('home.index',[
+            'page'=>$page,
+            'setting'=>$setting,
             'sliderdata'=>$sliderdata,
             'placelist1'=>$placelist1,
             'placelist2'=>$placelist2,
