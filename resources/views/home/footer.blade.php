@@ -9,7 +9,9 @@
             <div class="col-md-3">
                 <h3>About</h3>
                 <ul>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="{{route('about')}}">About us</a></li>
+                    <li><a href="{{route('references')}}">References</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Login</a></li>
                     <li><a href="#">Register</a></li>
@@ -57,7 +59,7 @@
                         <li><a href="#"><i class="icon-vimeo"></i></a></li>
                         <li><a href="#"><i class="icon-youtube-play"></i></a></li>
                     </ul>
-                    <p>© Citytours 2021</p>
+                    <p>© Beste Çetin 2022</p>
                 </div>
             </div>
         </div><!-- End row -->

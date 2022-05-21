@@ -211,33 +211,27 @@
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >About Us
                                                     </label>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <textarea name="aboutus"  id="aboutus">
                                                             {{$data->aboutus}}
                                                         </textarea>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="tab_content5" aria-labelledby="profile-tab">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Contact
                                                     </label>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <textarea name="contact"  id="contact">
                                                             {{$data->contact}}
                                                         </textarea>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane fade" id="tab_content6" aria-labelledby="profile-tab">
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >References
                                                     </label>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
                                                         <textarea name="references"  id="references">
                                                             {{$data->references}}
                                                         </textarea>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
