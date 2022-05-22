@@ -7,7 +7,9 @@
 @section('keywords', $setting->keywords)
 @section('icon', Storage::url($setting->icon))
 
+
 @section('slider')
+    <main>
     @include('home.slider')
 @endsection
 @section('content')
@@ -92,7 +94,6 @@
             </div>
         @endforeach
             <!-- /item -->
-
         </div>
         <!-- /carousel -->
 
@@ -251,8 +252,6 @@
         <p class="btn_home_align"><a href="blog.html" class="btn_1 rounded">View all news</a></p>
     </div>
     <!-- End container -->
-    <script src="{{asset('assets')}}/js/jquery-3.6.0.min.js"></script>
-    <script src="{{asset('assets')}}/js/common_scripts_min.js"></script>
-    <script src="{{asset('assets')}}/js/functions.js"></script>
+</main>
 
 @endsection

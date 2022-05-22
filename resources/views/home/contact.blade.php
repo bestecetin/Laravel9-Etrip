@@ -13,6 +13,7 @@
         <div class="parallax-content-1 opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.6)">
             <div class="animated fadeInDown">
                 <h1>Contact us</h1>
+                <p>{!!$setting->contact!!}</p>
             </div>
         </div>
     </section>
@@ -39,20 +40,21 @@
                         <h3><strong><i class="icon-pencil"></i></strong>Fill the form below</h3>
                     </div>
                     <div class="step">
-
                         <div id="message-contact"></div>
-                        <form method="post" action="http://www.ansonika.com/citytours/assets/contact.php" id="contactform">
+                        @include('home.messages')
+                        <form method="post" action="{{route("storemessage")}}" id="demo-form2">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control" id="name_contact" name="name_contact" placeholder="Enter Name">
+                                        <label>Name & Surname</label>
+                                        <input type="text" class="form-control" name="name" placeholder="Enter Name & Surname">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" id="lastname_contact" name="lastname_contact" placeholder="Enter Last Name">
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control" name="phone" placeholder="Enter Phone">
                                     </div>
                                 </div>
                             </div>
@@ -61,13 +63,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" id="email_contact" name="email_contact" class="form-control" placeholder="Enter Email">
+                                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Phone</label>
-                                        <input type="text" id="phone_contact" name="phone_contact" class="form-control" placeholder="Enter Phone number">
+                                        <label>Subject</label>
+                                        <input type="text" name="subject" class="form-control" placeholder="Enter Subject">
                                     </div>
                                 </div>
                             </div>
@@ -75,15 +77,15 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>Message</label>
-                                        <textarea rows="5" id="message_contact" name="message_contact" class="form-control" placeholder="Write your message" style="height:200px;"></textarea>
+                                        <textarea rows="5"  name="message" class="form-control" placeholder="Write your message" style="height:200px;"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <label>Human verification</label>
-                                    <input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="Are you human? 3 + 1 =">
-                                    <input type="submit" value="Submit" class="btn_1" id="submit-contact">
+                                        <label>Human verification</label>
+                                        <input type="text" id="verify_contact" class=" form-control add_bottom_30" placeholder="Are you human? 3 + 1 =">
+                                        <input type="submit" value="Submit" class="btn_1" >
                                 </div>
                             </div>
                         </form>
@@ -125,7 +127,6 @@
 
     </main>
     <!-- End main -->
-
 
 
 

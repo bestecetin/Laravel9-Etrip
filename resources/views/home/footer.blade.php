@@ -13,9 +13,6 @@
                     <li><a href="{{route('references')}}">References</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Terms and condition</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -28,23 +25,12 @@
                 </ul>
             </div>
             <div class="col-md-2">
-                <h3>Settings</h3>
-                <div class="styled-select">
-                    <select name="lang" id="lang">
-                        <option value="English" selected>English</option>
-                        <option value="French">French</option>
-                        <option value="Spanish">Spanish</option>
-                        <option value="Russian">Russian</option>
-                    </select>
-                </div>
-                <div class="styled-select">
-                    <select name="currency" id="currency">
-                        <option value="USD" selected>USD</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                        <option value="RUB">RUB</option>
-                    </select>
-                </div>
+                <h3>Login</h3>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Terms and condition</a></li>
+                </ul>
             </div>
         </div><!-- End row -->
         <div class="row">

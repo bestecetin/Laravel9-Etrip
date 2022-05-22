@@ -1,9 +1,10 @@
-<main>
+
     <!-- START SLIDER -->
     <div id="rev_slider_45_1_wrapper" class="rev_slider_wrapper fullscreen-container" style="background:#000000;padding:0px;">
         <div id="rev_slider_45_1" class="rev_slider fullscreenbanner tiny_bullet_slider" style="display:none;" data-version="5.4.8">
-            @foreach($sliderdata as $rs)
+
             <ul>
+                @foreach($sliderdata as $rs)
                 <li data-index="rs-67" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="600" data-thumb="" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-slicey_shadow="0px 0px 0px 0px transparent">
                     <!-- main image -->
                     <img src="{{Storage::url($rs->image)}}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power2.easeInOut" data-scalestart="100" data-scaleend="150" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
@@ -25,93 +26,16 @@
                     <div class="tp-caption tp-resizeme" id="slide-67-layer-3" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['90','90','60','30']" data-fontsize="['25','25','25','20']" data-lineheight="['35','35','35','30']" data-width="['480','480','480','360']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 20; min-width: 480px; max-width: 480px; white-space: normal; font-size: 25px; line-height: 35px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">Expolore top rated tours, hotels and restaurants around the world!</div>
                     <a class="tp-caption tp-resizeme rs-btn btn_1" data-actions='[{"event":"click","action":"scrollbelow","offset":"-49px","delay":"","speed":"300","ease":"Linear.easeNone"}]' id="slide-67-layer-7" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['200','200','160','120']" data-width="250" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='' data-responsive_offset="on" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]' data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[50,50,50,50]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[50,50,50,50]" style="z-index: 21; min-width: 250px; max-width: 250px; white-space: nowrap; font-size: 18px; line-height: 60px; font-weight: 500; border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">GET STARTED</a>
                 </li>
+                @endforeach
             </ul>
-            @endforeach
             <div class="tp-bannertimer tp-bottom" style="height: 5px; background:#e14d67;"></div>
         </div>
     </div>
     <!-- END REVOLUTION SLIDER -->
 
-</main>
-<!-- End main -->
-<script src="{{asset('assets')}}/js/jquery-3.6.0.min.js"></script>
-<script src="{{asset('assets')}}/js/common_scripts_min.js"></script>
-<script src="{{asset('assets')}}/js/functions.js"></script>
 
-<script src="{{asset('assets')}}/rev-slider-files/js/jquery.themepunch.tools.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/jquery.themepunch.revolution.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.addon.slicey.min.js"></script>
 
-<script>
-    var tpj = jQuery;
-    var revapi45;
-    tpj(document).ready(function() {
-        if (tpj("#rev_slider_45_1").revolution == undefined) {
-            revslider_showDoubleJqueryError("#rev_slider_45_1");
-        } else {
-            revapi45 = tpj("#rev_slider_45_1").show().revolution({
-                sliderType: "standard",
-                jsFileLocation: "revolution/js/",
-                sliderLayout: "fullscreen",
-                dottedOverlay: "none",
-                delay: 9000,
-                navigation: {
-                    keyboardNavigation: "off",
-                    keyboard_direction: "horizontal",
-                    mouseScrollNavigation: "off",
-                    mouseScrollReverse: "default",
-                    onHoverStop: "off",
-                    bullets: {
-                        enable: true,
-                        hide_onmobile: false,
-                        style: "bullet-bar",
-                        hide_onleave: false,
-                        direction: "horizontal",
-                        h_align: "center",
-                        v_align: "bottom",
-                        h_offset: 0,
-                        v_offset: 50,
-                        space: 5,
-                        tmp: ''
-                    }
-                },
-                responsiveLevels: [1240, 1024, 778, 480],
-                visibilityLevels: [1240, 1024, 778, 480],
-                gridwidth: [1240, 1024, 778, 480],
-                gridheight: [868, 768, 960, 720],
-                lazyType: "none",
-                shadow: 0,
-                spinner: "off",
-                stopLoop: "off",
-                stopAfterLoops: -1,
-                stopAtSlide: -1,
-                shuffle: "off",
-                autoHeight: "off",
-                fullScreenAutoWidth: "off",
-                fullScreenAlignForce: "off",
-                fullScreenOffsetContainer: "",
-                fullScreenOffset: "0px",
-                hideThumbsOnMobile: "off",
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                debugMode: false,
-                fallbacks: {
-                    simplifyAll: "off",
-                    nextSlideOnWindowFocus: "off",
-                    disableFocusListener: false,
-                }
-            });
-        }
-        if (revapi45) revapi45.revSliderSlicey();
-    });
-</script>
+
 
 
 

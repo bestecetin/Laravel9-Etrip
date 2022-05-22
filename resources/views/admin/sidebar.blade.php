@@ -36,7 +36,7 @@
                     <li><a href="/admin/place"><i class="fa fa-th"></i>Places </a></li>
                     <li><a href="/admin/comment"><i class="fa fa-comment"></i>Comments </a></li>
                     <li><a href="/admin/faq"><i class="fa fa-question"></i>FAQ </a></li>
-                    <li><a href="/admin/messages"><i class="fa fa-envelope"></i>Messages</a></li>
+                    <li><a href="{{route('admin.message.index')}}"><i class="fa fa-envelope"></i>Messages</a></li>
                     <li><a href="/admin/social"><i class="fa fa-laptop"></i>Social </a></li>
                     <li><a href="/admin/user"><i class="fa fa-user"></i>Users</a></li>
                 </ul>
