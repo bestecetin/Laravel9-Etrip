@@ -127,7 +127,6 @@ class AdminPlaceController extends Controller
         $data->save();
         return redirect('admin/place');
 
-
     }
 
     /**

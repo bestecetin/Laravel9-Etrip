@@ -12,7 +12,7 @@
                     <li><a href="{{route('about')}}">About us</a></li>
                     <li><a href="{{route('references')}}">References</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="{{route('faq')}}">FAQ</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -31,6 +31,7 @@
                     <li><a href="#">Register</a></li>
                     <li><a href="#">Terms and condition</a></li>
                 </ul>
+               </div>
             </div>
         </div><!-- End row -->
         <div class="row">
