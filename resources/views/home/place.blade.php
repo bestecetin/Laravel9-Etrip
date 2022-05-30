@@ -31,6 +31,7 @@
             </div>
         </div>
         <!-- End Position -->
+        @include('home.messages')
 
         <div class="collapse" id="collapseMap">
             <div id="map" class="map"></div>
@@ -200,28 +201,9 @@
                     <div class="row" id="rating_summary">
                         <div class="col-md-6">
                             <ul>
-                                <li>Position
+                                <li>Rate
                                     <div class="rating">
                                         <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                                    </div>
-                                </li>
-                                <li>Tourist guide
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Price
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                                    </div>
-                                </li>
-                                <li>Quality
-                                    <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
                                     </div>
                                 </li>
                             </ul>
@@ -229,44 +211,30 @@
                     </div>
                     <!-- End row -->
                     <hr>
+                    @foreach($reviews as $rs)
                     <div class="review_strip_single">
-                        <img src="{{asset('assets')}}/img/avatar1.jpg" alt="Image" class="rounded-circle">
-                        <small> - 10 March 2015 -</small>
-                        <h4>Jhon Doe</h4>
-                        <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-                        </p>
+                        <i class="icon_set_1_icon-70"></i>
+                        <small> - {{$rs->created_at}} -</small>
+                        <h4>{{$rs->user->name}}</h4>
+                            <strong>{{$rs->subject}}</strong>
+                            <p>{{$rs->review}} </p>
                         <div class="rating">
+                        @if($rs->rate=="Super")
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
+                        @elseif($rs->rate=="Excellent")
+                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
+                        @elseif($rs->rate=="Good")
                             <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                        @elseif($rs->rate=="Sufficient")
+                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                        @else($rs->rate=="Low")
+                            <i class="icon-frown voted"></i></i>
+                        @endif
                         </div>
                     </div>
+                @endforeach
                     <!-- End review strip -->
 
-                    <div class="review_strip_single">
-                        <img src="{{asset('assets')}}/img/avatar3.jpg" alt="Image" class="rounded-circle">
-                        <small> - 10 March 2015 -</small>
-                        <h4>Jhon Doe</h4>
-                        <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-                        </p>
-                        <div class="rating">
-                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                        </div>
-                    </div>
-                    <!-- End review strip -->
-
-                    <div class="review_strip_single last">
-                        <img src="{{asset('assets')}}/img/avatar2.jpg" alt="Image" class="rounded-circle">
-                        <small> - 10 March 2015 -</small>
-                        <h4>Jhon Doe</h4>
-                        <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus."
-                        </p>
-                        <div class="rating">
-                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                        </div>
-                    </div>
-                    <!-- End review strip -->
                 </div>
             </div>
         </div>
@@ -282,6 +250,62 @@
         <!-- Mask on input focus -->
 
     </main>
+    <!-- Modal Review -->
+    <div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="myReviewLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myReviewLabel">Write your review</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div id="message-review">
+                    </div>
+                    <form method="post" action="{{route("storecomment")}}"  id="demo-form2">
+                        @csrf
+                        <input name="place_id" id="tour_name" type="hidden" value="{{$data->id}}">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input name="subject" id="subject" type="text" placeholder="Subject" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Please review</label>
+                                    <select class="form-control" name="rate" id="rate">
+                                        <option value="Low">Low</option>
+                                        <option value="Sufficient">Sufficient</option>
+                                        <option value="Good">Good</option>
+                                        <option value="Excellent">Excellent</option>
+                                        <option value="Super">Super</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End row -->
+                        <div class="form-group">
+                            <textarea name="review" id="review" class="form-control" style="height:100px" placeholder="Write your review"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="verify_review" class=" form-control" placeholder="Are you human? 3 + 1 =">
+                        </div>
+                        <div class="form-group">
+                            @auth
+                                <input type="submit" value="Submit" class="btn_1" >
+                            @else
+                                <a href="/login" class="btn_1">For Submit Your Review, Please Login</a>
+                            @endauth
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal review -->
     <!-- End main -->
     <!-- Common scripts -->
     <script src="{{asset('assets')}}/js/jquery-3.6.0.min.js"></script>

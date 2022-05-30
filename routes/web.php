@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPanel\AdminPlaceController;
+use App\Http\Controllers\AdminPanel\CommentController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
@@ -27,11 +28,12 @@ Route::get('/hello', function () {
     return "Hello World";
 });
 //****** Home Page Routes****
+Route::post('/storecomment', [HomeController::class, 'storecomment'])->name('storecomment');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::post('/storemessage', [HomeController::class, 'storemessage'])->name('storemessage');
+Route::post('/storemessage', [HomeController::class, 'storemessagee'])->name('storemessage');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 
 
@@ -81,6 +83,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
     });
     //****** Admin Message Routes ****
     Route::prefix('/message')->name('message.')->controller(MessageController::class)->group(function () {
+        Route::get('/',  'index')->name('index');
+        Route::get('/show/{id}', 'show')->name('show');
+        Route::post('/update/{id}', 'update')->name('update');
+        Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+    });
+    //****** Admin Comment Routes ****
+    Route::prefix('/comment')->name('comment.')->controller(CommentController::class)->group(function () {
         Route::get('/',  'index')->name('index');
         Route::get('/show/{id}', 'show')->name('show');
         Route::post('/update/{id}', 'update')->name('update');
