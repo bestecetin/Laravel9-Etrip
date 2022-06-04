@@ -192,18 +192,42 @@
                     <a href="#" class="btn_1 add_bottom_30" data-toggle="modal" data-target="#myReview">Leave a review</a>
                 </div>
                 <div class="col-lg-9">
-                    <div id="general_rating">11 Reviews
-                        <div class="rating">
-                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                        </div>
+                    <div id="general_rating">{{$data->comment->count('id')}} Reviews
+                       @php
+                       $avarage=$data->comment->average('rate');
+                        if($avarage==0)
+                            $state="Not Yet Rated";
+                        elseif($avarage>4)
+                            $state="Super";
+                        elseif($avarage>3)
+                            $state="Excellent";
+                        elseif($avarage>2)
+                            $state="Good";
+                        else
+                            $state="Sufficient";
+                       @endphp
+                    </div>
+                    <div id="score_detail"><span>{{number_format($avarage,1)}}</span>{{$state}}<small>(Based on {{$data->comment->count('id')}} reviews)</small>
                     </div>
                     <!-- End general_rating -->
                     <div class="row" id="rating_summary">
                         <div class="col-md-6">
                             <ul>
-                                <li>Rate
+                                <li><strong>Rate</strong>
                                     <div class="rating">
-                                        <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                                        @if($avarage==0)
+                                            <i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                                        @elseif($avarage<1)
+                                            <i class="icon-frown voted"></i></i>
+                                        @elseif($avarage<2)
+                                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                                        @elseif($avarage<3)
+                                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
+                                        @elseif($avarage<4)
+                                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
+                                        @else($avarage<5)
+                                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
+                                        @endif
                                     </div>
                                 </li>
                             </ul>
@@ -219,15 +243,15 @@
                             <strong>{{$rs->subject}}</strong>
                             <p>{{$rs->review}} </p>
                         <div class="rating">
-                        @if($rs->rate=="Super")
+                        @if($rs->rate==5)
                                 <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i>
-                        @elseif($rs->rate=="Excellent")
+                        @elseif($rs->rate==4)
                             <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i>
-                        @elseif($rs->rate=="Good")
+                        @elseif($rs->rate==3)
                             <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                        @elseif($rs->rate=="Sufficient")
+                        @elseif($rs->rate==2)
                             <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i>
-                        @else($rs->rate=="Low")
+                        @else($rs->rate==1)
                             <i class="icon-frown voted"></i></i>
                         @endif
                         </div>
@@ -277,11 +301,11 @@
                                 <div class="form-group">
                                     <label>Please review</label>
                                     <select class="form-control" name="rate" id="rate">
-                                        <option value="Low">Low</option>
-                                        <option value="Sufficient">Sufficient</option>
-                                        <option value="Good">Good</option>
-                                        <option value="Excellent">Excellent</option>
-                                        <option value="Super">Super</option>
+                                        <option value="1">Low</option>
+                                        <option value="2">Sufficient</option>
+                                        <option value="3">Good</option>
+                                        <option value="4">Excellent</option>
+                                        <option value="5">Super</option>
                                     </select>
                                 </div>
                             </div>

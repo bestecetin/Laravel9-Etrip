@@ -84,8 +84,24 @@
                     </div>
                     <div class="tour_title">
                         <h3><strong>{{$rs->title}}</strong> {{$rs->city}}</h3>
+                        @php
+                            $avarage=0;
+                            $avarage=$rs->comment->average('rate');
+                        @endphp
                         <div class="rating">
-                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
+                            @if($avarage==0)
+                                <i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small></i>
+                            @elseif($avarage<1)
+                                <i class="icon-frown voted"></i></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<2)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<3)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<4)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @else($avarage<5)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><small>{{$rs->comment->count('id')}}</small>
+                            @endif
                         </div>
                         <!-- end rating -->
                     </div>
@@ -122,11 +138,26 @@
                     </div>
                     <div class="tour_title">
                         <h3><strong>{{$rs->title}}</strong> {{$rs->city}}</h3>
+                        @php
+                            $avarage=0;
+                            $avarage=$rs->comment->average('rate');
+                        @endphp
                         <div class="rating">
-                            <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>(75)</small>
-                        </div>
-                        <!-- end rating -->
+                            @if($avarage==0)
+                                <i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small></i>
+                            @elseif($avarage<1)
+                                <i class="icon-frown voted"></i></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<2)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<3)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @elseif($avarage<4)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile"></i><small>{{$rs->comment->count('id')}}</small>
+                            @else($avarage<5)
+                                <i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><i class="icon-smile voted"></i><small>{{$rs->comment->count('id')}}</small>
+                            @endif
                     </div>
+                </div>
                 </div>
                 <!-- End box tour -->
             </div>
