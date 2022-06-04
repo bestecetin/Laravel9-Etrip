@@ -6,9 +6,15 @@
                 <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
                 <div class="col-6">
                     <ul id="top_links">
-                        <li><a href="#sign-in-dialog" id="access_link">Sign in</a></li>
-                        <li><a href="wishlist.html" id="wishlist_link">Wishlist</a></li>
-                        <li><a href="https://1.envato.market/ryzjQ" target="_parent">Purchase this template</a></li>
+                        @auth
+                            <li><i class="icon-user"></i><strong>{{Auth::user()->name}}</strong></li>
+                            <li><i class="icon-logout"></i><a href="/logoutuser">Logout</a></li>
+                        @endauth
+                            @guest
+                                <li><i class="icon-login"></i><a href="/loginuser" >Sign in</a></li>
+                                <li><i class="icon-login"></i><a href="/registeruser" >Join</a></li>
+                            @endguest
+
                     </ul>
                 </div>
             </div><!-- End row -->
@@ -224,33 +230,6 @@
                 <ul id="top_tools">
                     <li>
                         <a href="javascript:void(0);" class="search-overlay-menu-btn"><i class="icon_search"></i></a>
-                    </li>
-                    <li>
-                        <div class="dropdown dropdown-cart">
-                            <a href="#" data-toggle="dropdown" class="cart_bt"><i class="icon_bag_alt"></i><strong>3</strong></a>
-                            <ul class="dropdown-menu" id="cart_items">
-                                <li>
-                                    <div class="image"><img src="{{asset('assets')}}/img/thumb_cart_1.jpg" alt="image"></div>
-                                    <strong><a href="#">Louvre museum</a>1x $36.00 </strong>
-                                    <a href="#" class="action"><i class="icon-trash"></i></a>
-                                </li>
-                                <li>
-                                    <div class="image"><img src="{{asset('assets')}}/img/thumb_cart_2.jpg" alt="image"></div>
-                                    <strong><a href="#">Versailles tour</a>2x $36.00 </strong>
-                                    <a href="#" class="action"><i class="icon-trash"></i></a>
-                                </li>
-                                <li>
-                                    <div class="image"><img src="{{asset('assets')}}/img/thumb_cart_3.jpg" alt="image"></div>
-                                    <strong><a href="#">Versailles tour</a>1x $36.00 </strong>
-                                    <a href="#" class="action"><i class="icon-trash"></i></a>
-                                </li>
-                                <li>
-                                    <div>Total: <span>$120.00</span></div>
-                                    <a href="cart.html" class="button_drop">Go to cart</a>
-                                    <a href="payment.html" class="button_drop outline">Check out</a>
-                                </li>
-                            </ul>
-                        </div><!-- End dropdown-cart-->
                     </li>
                 </ul>
             </nav>

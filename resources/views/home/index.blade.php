@@ -75,7 +75,7 @@
                 <div class="tour_container">
                     <div class="ribbon_3 popular"><span>Popular</span></div>
                     <div class="img_container">
-                        <a href="single_tour.html">
+                        <a href="place/{{$rs->id}}.html">
                             <img src="{{Storage::url($rs->image)}}" style="height:200px;width:400px" class="img-fluid" alt="image">
                             <div class="short_info">
                                 {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}
@@ -129,7 +129,7 @@
                 <div class="hotel_container">
                     <div class="ribbon_3 popular"><span>Popular</span></div>
                     <div class="img_container">
-                        <a href="single_hotel.html">
+                        <a href="place/{{$rs->id}}.html">
                             <img src="{{Storage::url($rs->image)}}" style="height:200px;width:400px" class="img-fluid" alt="image">
                             <div class="short_info">
                                 {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}
