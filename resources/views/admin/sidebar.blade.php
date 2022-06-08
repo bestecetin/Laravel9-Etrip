@@ -13,7 +13,8 @@
             </div>
             <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Beste Cetin</h2>
+                <h2>{{Auth::user()->name}}</h2>
+                <i class="icon-logout"></i><a href="/logoutuser">Logout</a>
             </div>
         </div>
         <!-- /menu profile quick info -->
@@ -25,13 +26,7 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="{{asset('assets')}}/admin/production/index.html">Dashboard</a></li>
-                            <li><a href="{{asset('assets')}}/admin/production/index2.html">Dashboard2</a></li>
-                            <li><a href="{{asset('assets')}}/admin/production/index3.html">Dashboard3</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('admin.index')}}"><i class="fa fa-home"></i> Home</a></li>
                     <li><a href="/admin/category"><i class="fa fa-th"></i>Categories </a></li>
                     <li><a href="/admin/place"><i class="fa fa-th"></i>Places </a></li>
                     <li><a href="/admin/comment"><i class="fa fa-comment"></i>Comments </a></li>
