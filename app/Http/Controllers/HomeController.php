@@ -143,7 +143,7 @@ class HomeController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'error' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
 
