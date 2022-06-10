@@ -7,7 +7,7 @@
                 <div class="col-6">
                     <ul id="top_links">
                         @auth
-                            <li><i class="icon-user"></i><strong>{{Auth::user()->name}}</strong></li>
+                            <li><i class="icon-user"></i><a href="{{route('userpanel.index')}}"><strong>{{Auth::user()->name}}</strong></a></li>
                             <li><i class="icon-logout"></i><a href="/logoutuser">Logout</a></li>
                         @endauth
                             @guest

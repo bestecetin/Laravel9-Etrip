@@ -1,7 +1,6 @@
 
 @extends('layouts.frontbase')
-
-@section('title','User Login | ')
+@section('title','User Login')
 @section('content')
 
     <section class="parallax-window" data-parallax="scroll" data-image-src="{{asset('assets')}}/img/header_bg.jpg" data-natural-width="1400" data-natural-height="470">
