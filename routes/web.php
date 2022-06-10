@@ -3,10 +3,12 @@
 use App\Http\Controllers\AdminPanel\AdminPlaceController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
 use App\Http\Controllers\AdminPanel\CommentController;
+use App\Http\Controllers\AdminPanel\ConfirmController;
 use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\AdminPanel\ImageController;
 use App\Http\Controllers\AdminPanel\MessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlaceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
@@ -63,6 +65,26 @@ Route::middleware('auth')->group(function (){
         Route::get('/', 'index')->name('index');
         Route::get('/reviews', 'reviews')->name('reviews');
         Route::get('/reviewsdestroy/{id}', 'reviewsdestroy')->name('reviewsdestroy');
+
+
+        //****** User Place Panel Routes ****
+        Route::prefix('/place')->name('place.')->controller(PlaceController::class)->group(function () {
+            Route::get('/',  'index')->name('index');
+            Route::get('/create', 'create')->name('create');
+            Route::post('/store', 'store')->name('store');
+            Route::get('/edit/{id}','edit')->name('edit');
+            Route::post('/update/{id}', 'update')->name('update');
+            Route::get('/destroy/{id}', 'destroy')->name('destroy');
+            Route::get('/show/{id}', 'show')->name('show');
+        });
+
+        //****** User Place Gallery Panel Routes ****
+        Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function () {
+            Route::get('/{pid}',  'index')->name('index');
+            Route::post('/store/{pid}', 'store')->name('store');
+            Route::get('/destroy/{pid}/{id}', 'destroy')->name('destroy');
+
+        });
     });
 
 //****** Admin Panel Routes****
@@ -136,8 +158,14 @@ Route::middleware('auth')->group(function (){
         Route::post('/addrole/{id}', 'addrole')->name('addrole');
         Route::get('/destroyrole/{uid}/{rid}', 'destroyrole')->name('destroyrole');
 
-
     });
+        Route::prefix('/confirm')->name('confirm.')->controller(ConfirmController::class)->group(function () {
+            Route::get('/',  'index')->name('index');
+            Route::get('/show/{id}', 'show')->name('show');
+            Route::post('/update/{id}', 'update')->name('update');
+            Route::get('/destroy/{id}', 'destroy')->name('destroy');
+
+        });
 
   });
 });

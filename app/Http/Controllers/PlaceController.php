@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\AdminPanel;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class AdminPlaceController extends Controller
+class PlaceController extends Controller
 {
 
     /**
@@ -19,8 +19,8 @@ class AdminPlaceController extends Controller
      */
     public function index()
     {
-        $data=Place::all();
-        return view('admin.place.index',[
+        $data=Place::where('user_id',Auth::id())->get();
+        return view('home.user.place',[
             'data'=>$data
         ]);
     }
@@ -33,7 +33,7 @@ class AdminPlaceController extends Controller
     public function create()
     {
         $data=Category::all();
-        return view('admin.place.create',[
+        return view('home.user.place_add',[
             'data'=>$data
         ]);
     }
@@ -48,7 +48,7 @@ class AdminPlaceController extends Controller
     {
         $data= new Place();
         $data->category_id=$request->category_id;
-        $data->user_id==Auth::id(); //$request->category_id;
+        $data->user_id=Auth::id(); //$request->category_id;
         $data->title=$request->title;
         $data->keywords=$request->keywords;
         $data->detail=$request->detail;
@@ -60,12 +60,11 @@ class AdminPlaceController extends Controller
         $data->working_hours_end=$request->working_hours_end;
         $data->working_days=$request->working_days;
         $data->description=$request->description;
-        $data->status=$request->status;
         if ($request->file('image')){
             $data->image=$request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin\place');
+        return redirect('userpanel/place')->with('info','Adding place is successful. Will be published after approval');
     }
 
     /**
@@ -77,7 +76,7 @@ class AdminPlaceController extends Controller
     public function show(Place $place,$id)
     {
         $data=Place::find($id);
-        return view('admin.place.show',[
+        return view('home.user.show',[
             'data'=>$data
         ]);
     }
@@ -92,7 +91,7 @@ class AdminPlaceController extends Controller
     {
         $data=Place::find($id);
         $datalist=Category::all();
-        return view('admin.place.edit',[
+        return view('home.user.place_edit',[
             'data'=>$data,
             'datalist'=>$datalist
         ]);
@@ -109,7 +108,7 @@ class AdminPlaceController extends Controller
     {
         $data=Place::find($id);
         $data->category_id=$request->category_id;
-        $data->user_id==Auth::id(); //$request->category_id;
+        $data->user_id=Auth::id();; //$request->category_id;
         $data->title=$request->title;
         $data->keywords=$request->keywords;
         $data->detail=$request->detail;
@@ -120,13 +119,13 @@ class AdminPlaceController extends Controller
         $data->working_hours_start=$request->working_hours_start;
         $data->working_hours_end=$request->working_hours_end;
         $data->working_days=$request->working_days;
-        $data->status=$request->status;
+        $data->status='New';
         $data->description=$request->description;
         if ($request->file('image')){
             $data->image=$request->file('image')->store('images');
         }
         $data->save();
-        return redirect('admin/place');
+        return redirect('userpanel/place')->with('info','Editing place is successful. Will be published after approval');
 
     }
 
@@ -143,7 +142,7 @@ class AdminPlaceController extends Controller
             Storage::delete($data->image);
         }
         $data->delete();
-        return redirect('admin/place');
+        return redirect('userpanel/place');
 
     }
 }
