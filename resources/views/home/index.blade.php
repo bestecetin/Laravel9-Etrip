@@ -6,7 +6,6 @@
 @section('keywords', $setting->keywords)
 @section('icon', Storage::url($setting->icon))
 
-
 @section('slider')
     <main>
     @include('home.slider')
@@ -81,7 +80,6 @@
                                 {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($rs->category,$rs->category->title)}}
                             </div>
                         </a>
-
                   </div>
                 <div class="tour_title">
                     <h3><strong>{{$rs->title}}</strong> {{$rs->city}}</h3>

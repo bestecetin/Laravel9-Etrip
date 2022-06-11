@@ -3,7 +3,7 @@ use App\Models\Setting;
 $setting=Setting::first();
 @endphp
 
-<footer class="revealed">
+<footer class="">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -37,7 +37,6 @@ $setting=Setting::first();
                         <li><a href="{{$setting->facebook}}"><i class="icon-facebook"></i></a></li>
                         <li><a href="{{$setting->twitter}}"><i class="icon-twitter"></i></a></li>
                         <li><a href="{{$setting->youtube}}"><i class="icon-youtube-play"></i></a></li>
-                        <li><a href="{{route('test')}}"><i class="icon-youtube-play"></i></a></li>
                     </ul>
                     <p>© Beste Çetin 2022</p>
                 </div>

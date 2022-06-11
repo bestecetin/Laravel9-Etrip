@@ -21,26 +21,22 @@
     <link href="{{asset('assets')}}/css/style.css" rel="stylesheet">
     <link href="{{asset('assets')}}/css/vendors.css" rel="stylesheet">
 
-    <!-- REVOLUTION SLIDER CSS -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/rev-slider-files/fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/rev-slider-files/css/settings.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/rev-slider-files/css/layers.css">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets')}}/rev-slider-files/css/navigation.css">
-
     <!-- ALTERNATIVE COLORS CSS -->
     <link href="#" id="colors" rel="stylesheet">
 
     <!-- CUSTOM CSS -->
     <link href="{{asset('assets')}}/css/custom.css" rel="stylesheet">
- @yield("head")
+    <!-- REVOLUTION SLIDER CSS -->
+    <link href="{{asset('assets')}}/layerslider/css/layerslider.css" rel="stylesheet">
+    @yield("head")
 </head>
 
 <body>
 @include("home.header")
 
 @section('slider')
-
 @show
+
 
 @yield('content')
 
@@ -55,81 +51,25 @@
 
 <!-- Specific scripts -->
 <script src="{{asset('assets')}}/assets/validate.js"></script>
-
-<!-- SLIDER REVOLUTION SCRIPTS  -->
-<script src="{{asset('assets')}}/rev-slider-files/js/jquery.themepunch.tools.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/jquery.themepunch.revolution.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="{{asset('assets')}}/rev-slider-files/js/extensions/revolution.addon.slicey.min.js"></script>
-
-<script>
-    var tpj = jQuery;
-    var revapi45;
-    tpj(document).ready(function() {
-        if (tpj("#rev_slider_45_1").revolution == undefined) {
-            revslider_showDoubleJqueryError("#rev_slider_45_1");
-        } else {
-            revapi45 = tpj("#rev_slider_45_1").show().revolution({
-                sliderType: "standard",
-                jsFileLocation: "revolution/js/",
-                sliderLayout: "fullscreen",
-                dottedOverlay: "none",
-                delay: 9000,
-                navigation: {
-                    keyboardNavigation: "off",
-                    keyboard_direction: "horizontal",
-                    mouseScrollNavigation: "off",
-                    mouseScrollReverse: "default",
-                    onHoverStop: "off",
-                    bullets: {
-                        enable: true,
-                        hide_onmobile: false,
-                        style: "bullet-bar",
-                        hide_onleave: false,
-                        direction: "horizontal",
-                        h_align: "center",
-                        v_align: "bottom",
-                        h_offset: 0,
-                        v_offset: 50,
-                        space: 5,
-                        tmp: ''
-                    }
-                },
-                responsiveLevels: [1240, 1024, 778, 480],
-                visibilityLevels: [1240, 1024, 778, 480],
-                gridwidth: [1240, 1024, 778, 480],
-                gridheight: [868, 768, 960, 720],
-                lazyType: "none",
-                shadow: 0,
-                spinner: "off",
-                stopLoop: "off",
-                stopAfterLoops: -1,
-                stopAtSlide: -1,
-                shuffle: "off",
-                autoHeight: "off",
-                fullScreenAutoWidth: "off",
-                fullScreenAlignForce: "off",
-                fullScreenOffsetContainer: "",
-                fullScreenOffset: "0px",
-                hideThumbsOnMobile: "off",
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                debugMode: false,
-                fallbacks: {
-                    simplifyAll: "off",
-                    nextSlideOnWindowFocus: "off",
-                    disableFocusListener: false,
-                }
-            });
-        }
-        if (revapi45) revapi45.revSliderSlicey();
+<!-- Specific scripts -->
+<script src="{{asset('assets')}}/js/jquery-migrate.min.js"></script>
+<script src="{{asset('assets')}}/layerslider/js/greensock.js"></script>
+<script src="{{asset('assets')}}/layerslider/js/layerslider.transitions.js"></script>
+<script src="{{asset('assets')}}/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        'use strict';
+        $('#layerslider').layerSlider({
+            autoStart: true,
+            responsive: true,
+            responsiveUnder: 1280,
+            layersContainer: 1170,
+            skinsPath: 'layerslider/skins/'
+            // Please make sure that you didn't forget to add a comma to the line endings
+            // except the last line!
+        });
     });
 </script>
+
 </body>
 </html>
