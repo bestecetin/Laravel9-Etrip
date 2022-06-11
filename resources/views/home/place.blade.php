@@ -2,6 +2,8 @@
 @extends('layouts.frontbase')
 
 @section('title', $data->title)
+@section('description',$data->description)
+@section('keywords', $data->keywords)
 
 @section('content')
 

@@ -104,19 +104,15 @@ class HomeController extends Controller
         ]);
     }
     public function categoryproducts($id){
-        echo "Category Product";
-        exit();
-        $data=Place::find($id);
-        $images=DB::table('images')->where('place_id',$id)->get();
-        $reviews=Comment::where('place_id',$id)->where('status','True')->get();
-        return view('home.place',[
-            'data'=>$data,
-            'images'=>$images,
-            'reviews'=>$reviews
+        $category=Category::find($id);
+        $places=Place::where('category_id',$id)->where('status','True')->get();
+        return view('home.categoryproducts',[
+            'category'=>$category,
+            'places'=>$places,
         ]);
     }
     public function test(){
-        return view('home.test');
+        return view('home._blank');
     }
 
     public function param($id,$number){

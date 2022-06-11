@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <!-- Mirrored from www.ansonika.com/citytours/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 18 Mar 2022 14:35:18 GMT -->
 <head>
     <meta charset="utf-8">
@@ -38,11 +37,8 @@
 
 <body>
 @include("home.header")
-@show
-
 
 @section('slider')
-
 
 @show
 

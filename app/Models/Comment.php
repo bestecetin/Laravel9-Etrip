@@ -15,5 +15,6 @@ class Comment extends Model
     public function place(){
         return $this->belongsTo(Place::class);
     }
+
 }
 
