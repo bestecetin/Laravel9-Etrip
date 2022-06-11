@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Faq;
 use App\Models\Message;
@@ -14,12 +15,15 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
     //
+    public static function maincategorylist(){
+        return Category::where('parent_id','=',0)->with('children')->get();
+    }
     public function index(){
         $page='home';
         $sliderdata=Place::limit(4)->get();
         $placelist1=Place::limit(6)->get();
-        $placelist2=Place::where('city','Istanbul')->limit(6)->get();
-        $placelist3=Place::where('city','Paris')->limit(6)->get();
+        $placelist2=Place::where('city','Istanbul')->where('status','True')->limit(6)->get();
+        $placelist3=Place::where('city','Paris')->where('status','True')->limit(6)->get();
 
         $setting=Setting::first();
         return view('home.index',[
@@ -97,6 +101,18 @@ class HomeController extends Controller
                 'data'=>$data,
                 'images'=>$images,
                 'reviews'=>$reviews
+        ]);
+    }
+    public function categoryproducts($id){
+        echo "Category Product";
+        exit();
+        $data=Place::find($id);
+        $images=DB::table('images')->where('place_id',$id)->get();
+        $reviews=Comment::where('place_id',$id)->where('status','True')->get();
+        return view('home.place',[
+            'data'=>$data,
+            'images'=>$images,
+            'reviews'=>$reviews
         ]);
     }
     public function test(){

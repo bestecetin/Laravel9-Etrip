@@ -54,6 +54,7 @@ Route::get('/param/{id}/{number}', [HomeController::class, 'param'])->name('para
 Route::post('/save', [HomeController::class, 'save'])->name('save');
 
 Route::get('/place/{id}', [HomeController::class, 'place'])->name('place');
+Route::get('/categoryproducts/{id}/{slug}', [HomeController::class, 'categoryproducts'])->name('categoryproducts');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

@@ -31,9 +31,7 @@
                     <div class="col-md-8">
                         <div class="box_style_1">
                             <h3><strong><i class="icon-pencil"></i></strong>User Profile</h3>
-                            <p>
                                 @include('profile.show')
-                            </p>
                        </div>
                     </div>
                 <div class="col-md-4">

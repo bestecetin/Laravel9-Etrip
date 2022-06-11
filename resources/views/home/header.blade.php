@@ -3,6 +3,9 @@
     <div id="top_line">
         <div class="container">
             <div class="row">
+                @php
+                    $mainCategories=\App\Http\Controllers\HomeController::maincategorylist()
+                @endphp
                 <div class="col-6"><i class="icon-phone"></i><strong>0045 043204434</strong></div>
                 <div class="col-6">
                     <ul id="top_links">
@@ -37,59 +40,19 @@
                     <a href="#" class="open_close" id="close_in"><i class="icon_set_1_icon-77"></i></a>
                     <ul>
                         <li class="submenu">
-                            <a href="javascript:void(0);" class="show-submenu">Home <i class="icon-down-open-mini"></i></a>
-                            <ul>
-                                <li><a href="index_21.html">Owl Carousel Slider</a></li>
-                                <li><a href="index_22.html">Home items with Carousel</a></li>
-                                <li><a href="index_23.html">Home with Search V2</a></li>
-                                <li class="third-level"><a href="javascript:void(0);">Revolution slider <strong class="badge badge-danger">New!</strong></a>
-                                    <ul>
-                                        <li><a href="index_24.html">Default slider</a></li>
-                                        <li><a href="index_20.html">Basic slider</a></li>
-                                        <li><a href="index_14.html">Youtube Hero</a></li>
-                                        <li><a href="index_15.html">Vimeo Hero</a></li>
-                                        <li><a href="index_17.html">Full Screen <strong class="badge badge-danger">New!</strong></a></li>
-                                        <li><a href="index-2.html">Full Screen Slicey <strong class="badge badge-danger">New!</strong></a></li>
-                                        <li><a href="index_16.html">Carousel</a></li>
-                                        <li><a href="index_19.html">Mailchimp Newsletter</a></li>
-                                        <li><a href="index_18.html">Fixed Caption</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="index_12.html">Layer slider</a></li>
-                                <li><a href="index_2.html">With Only tours</a></li>
-                                <li><a href="index_3.html">Single image</a></li>
-                                <li><a href="index_4.html">Header video</a></li>
-                                <li><a href="index_7.html">With search panel</a></li>
-                                <li><a href="index_13.html">With tabs</a></li>
-                                <li><a href="index_5.html">With map</a></li>
-                                <li><a href="index_6.html">With search bar</a></li>
-                                <li><a href="index_8.html">Search bar + Video</a></li>
-                                <li><a href="index_9.html">With Text Rotator</a></li>
-                                <li><a href="index_10.html">With Cookie Bar (EU law)</a></li>
-                                <li><a href="index_11.html">Popup Advertising</a></li>
-                            </ul>
+                            <a href="/" class="show-submenu">Home</a>
                         </li>
                         <li class="submenu">
-                            <a href="javascript:void(0);" class="show-submenu">Tours <i class="icon-down-open-mini"></i></a>
+
+                            <a href="javascript:void(0);" class="show-submenu">Categories <i class="icon-down-open-mini"></i></a>
                             <ul>
-                                <li><a href="all_tours_list.html">All tours list</a></li>
-                                <li><a href="all_tours_grid.html">All tours grid</a></li>
-                                <li><a href="all_tours_grid_masonry.html">All tours Sort Masonry</a></li>
-                                <li><a href="all_tours_map_listing.html">All tours map listing</a></li>
-                                <li><a href="single_tour.html">Single tour page</a></li>
-                                <li><a href="single_tour_with_gallery.html">Single tour with gallery</a></li>
-                                <li class="third-level"><a href="javascript:void(0);">Single tour fixed sidebar</a>
-                                    <ul>
-                                        <li><a href="single_tour_fixed_sidebar.html">Single tour fixed sidebar</a></li>
-                                        <li><a href="single_tour_with_gallery_fixed_sidebar.html">Single tour 2 Fixed Sidebar</a></li>
-                                        <li><a href="cart_fixed_sidebar.html">Cart Fixed Sidebar</a></li>
-                                        <li><a href="payment_fixed_sidebar.html">Payment Fixed Sidebar</a></li>
-                                        <li><a href="confirmation_fixed_sidebar.html">Confirmation Fixed Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="single_tour_working_booking.html">Single tour working booking</a></li>
-                                <li><a href="cart.html">Single tour cart</a></li>
-                                <li><a href="payment.html">Single tour booking</a></li>
+                                @foreach($mainCategories as $rs )
+                                <li @if(count($rs->children)) class="third-level" @endif ><a href="all_tours_list.html">{{$rs->title}}</a>
+
+                                    @if(count($rs->children))
+                                        @include('home.categorytree',['children'=>$rs->children])
+                                    @endif
+                                @endforeach
                             </ul>
                         </li>
                         <li class="submenu">
