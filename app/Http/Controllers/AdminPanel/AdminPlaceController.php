@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Place;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class AdminPlaceController extends Controller
@@ -145,5 +146,13 @@ class AdminPlaceController extends Controller
         $data->delete();
         return redirect('admin/place');
 
+    }
+    public function search()
+    {
+      $search_text=$_GET['query'];
+      $places=Place::where('title','LIKE','%'.$search_text.'%')->where('status','True')->get();
+        return view('home.search',[
+            'places'=>$places,
+        ]);
     }
 }

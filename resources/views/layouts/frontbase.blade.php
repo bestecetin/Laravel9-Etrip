@@ -70,6 +70,17 @@
         });
     });
 </script>
+<!-- Search Menu -->
+<div class="search-overlay-menu">
+
+    <a href="{{route('home')}}" > <span class="search-overlay-close" ><i class="icon_set_1_icon-77"></i></span></a>
+    <form role="search" id="searchform" method="get" action="{{route('search')}}">
+        <input value="" name="query" type="search" placeholder="Search Places"/>
+        <button type="submit"><i class="icon_set_1_icon-78"></i>
+        </button>
+    </form>
+</div><!-- End Search Menu -->
+
 
 </body>
 </html>

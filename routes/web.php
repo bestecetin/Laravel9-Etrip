@@ -31,6 +31,7 @@ Route::get('/welcome', function () {
 Route::get('/hello', function () {
     return "Hello World";
 });
+Route::get('/search', [AdminPlaceController::class, 'search'])->name('search');
 //****** Home Page Routes****
 Route::post('/storecomment', [HomeController::class, 'storecomment'])->name('storecomment');
 Route::get('/', [HomeController::class, 'index'])->name('home');

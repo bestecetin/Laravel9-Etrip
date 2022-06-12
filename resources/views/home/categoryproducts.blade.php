@@ -40,7 +40,8 @@
                             </div>
                             <div class="img_container">
                                 <a href="{{route('place',['id'=>$rs->id])}}">
-                                    <img src="{{Storage::url($rs->image)}}" style="height:200px;width:400px" class="img-fluid" alt="image">                                    <div class="short_info">
+                                    <img src="{{Storage::url($rs->image)}}" style="height:200px;width:400px" class="img-fluid" alt="image">
+                                    <div class="short_info">
                                         {{\App\Http\Controllers\AdminPanel\CategoryController::getParentsTree($category,$category->title)}}
                                     </div>
                                 </a>
