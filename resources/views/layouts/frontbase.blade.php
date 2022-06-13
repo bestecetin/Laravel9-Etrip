@@ -28,11 +28,14 @@
     <link href="{{asset('assets')}}/css/custom.css" rel="stylesheet">
     <!-- REVOLUTION SLIDER CSS -->
     <link href="{{asset('assets')}}/layerslider/css/layerslider.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
     @yield("head")
+
 </head>
 
 <body>
 @include("home.header")
+
 
 @section('slider')
 @show
@@ -81,6 +84,14 @@
     </form>
 </div><!-- End Search Menu -->
 
+<!-- include summernote css/js -->
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script>
 
 </body>
 </html>

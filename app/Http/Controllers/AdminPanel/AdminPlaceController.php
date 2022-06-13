@@ -110,7 +110,7 @@ class AdminPlaceController extends Controller
     {
         $data=Place::find($id);
         $data->category_id=$request->category_id;
-        $data->user_id==Auth::id(); //$request->category_id;
+        $data->user_id=Auth::id(); //$request->category_id;
         $data->title=$request->title;
         $data->keywords=$request->keywords;
         $data->detail=$request->detail;

@@ -2,7 +2,6 @@
 @extends('layouts.frontbase')
 
 @section('title','Edit Product')
-
 @section('content')
 
     <section class="parallax-window" data-parallax="scroll" data-image-src="{{asset('assets')}}/img/header_bg.jpg" data-natural-width="1400" data-natural-height="470">

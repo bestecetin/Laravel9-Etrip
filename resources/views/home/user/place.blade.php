@@ -70,7 +70,7 @@
                                     <td><a href="{{route('userpanel.place.edit',['id'=>$rs->id])}}" class="btn btn-round btn-primary">Edit</a></td>
                                     <td><a href="{{route('userpanel.place.destroy',['id'=>$rs->id])}}" class="btn btn-round btn-danger"
                                            onclick="return confirm('Deleting!!! Are you sure ?')">Delete</a></td>
-                                    <td><a href="{{route('userpanel.place.show',['id'=>$rs->id])}}" class="btn btn-round btn-success">Show</a></td>
+                                    <td><a href="{{route('place',['id'=>$rs->id])}}}" class="btn btn-round btn-success">Show</a></td>
                                 </tr>
                             @endforeach
                             </tbody>
